@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title>webpage using bootstrap</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!---- MY OWN STYLING FILE---->
+  <link rel="stylesheet" href="www/style/style.css">
+  <script src="https://use.fontawesome.com/5d7cb2a271.js"></script>
+</head>
+<body>
+  <div class="container">
+<img src="www/images/top.jpg" id="cover_photo">
+  <div id="page">
+    <div class="row">
+      <div class="col-md-4">
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Flash Files</a></li>
+          <li><a href="#">Website Templates</a></li>
+          <li><a href="#">Our Company</a></li>
+          <li><a href="#">Contact Information</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <h2>  Web Design Company</h2>
+        <div class="row">
+          <div class="col-md-5"><img src="www/images/img1.jpg" class="init_photo"></div>
+          <div class="col-md-7">
+            <h4 class="text-info">Responsive Bicyle</h4>
+            <div>Responsive bicyle is a new device used by older people to avoid their knee pains while cycling.</div>
+              <a href="#extra1" class="text-info" data-toggle="collapse" data-target="#extra1">Read more..</a>
+              <div id="extra1" class="collapse">It has brought a new era of bicyles making it easy for the riders to ride.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5"><img src="www/images/img2.jpg" class="init_photo"></div>
+          <div class="col-md-7">
+            <h4 class="text-info">Minions are Dope</h4>
+            <div>Once upon a time a meteor hit the earth in which a minion cell were present.</div>
+              <a href="#extra2" class="text-info" data-toggle="collapse" data-target="#extra2">Read more..</a>
+              <div id="extra2" class="collapse">It has brought a new era of bicyles making it easy for the riders to ride.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" id="cl_form">
+        <h3>Client Login</h3>
+        <form>
+          <div class="form-group">
+            <label for="username">User Name:</label>
+            <input type="text" class="form-control" id="username" name="username">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" name="pwd">
+          </div>
+          <button type="submit" class="btn btn-success">Login</button>
+        </form>
+      </div>
+      <div class="col-md-4" id="why">
+        <h2><img src="www/images/logo1.png" height="30px">  Why Us?</h2>
+        <div>You should choose us as we are a young group of entrepreneurs working together as a team.</div>
+        <ul style="list-style-type:none;">
+          <li><i class="fa fa-superpowers" aria-hidden="true"></i> Whatever</li>
+          <li><i class="fa fa-superpowers" aria-hidden="true"></i> Whenever</li>
+          <li><i class="fa fa-superpowers" aria-hidden="true"></i> Wherever</li>
+        </ul>
+      </div>
+      <div class="col-md-4" id="why">
+        <h2><img src="www/images/logo2.png" height="30px">  Standards</h2>
+        <div>Our standards are double sided. We think for the customers as well which i think isnt wrong.</div>
+        <ul style="list-style-type:none;">
+          <li><i class="fa fa-sign-language" aria-hidden="true"></i> Whatever</li>
+          <li><i class="fa fa-sign-language" aria-hidden="true"></i> Whenever</li>
+          <li><i class="fa fa-sign-language" aria-hidden="true"></i> Wherever</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" id="cl_form">
+        <h3>Latest Updates</h3>
+        <div class="updates"><img src="www/images/sun.png" height="20px">Todays weather is gonna be sunny. Whether you like it or not but the weather is still gonna be sunny.<br><div class="text-warning">25 September 2016</div></div>
+        <div class="updates"><img src="www/images/sun.png" height="20px">Weather and whether sound the same. It is so confusing that sometimes i have to look at the meaning of both the words.<br><div class="text-warning">04 November 2015</div></div>
+        <a class="text-warning" href="#">View more....</a>
+      </div>
+      <div class="col-md-8" id="WebPro">
+        <h2>Web Projects</h2>
+        <img src="www/images/img3.jpg">
+        <img src="www/images/img4.jpg">
+        <img src="www/images/img5.jpg">
+        <a href="#" class="text-warning">View all Projects....</a>
+      </div>
+    </div>
+  </div>
+  <footer>Copyright &copy; 2048 Your Company Name | Designed by free CSS template | Validate XHTML & CSS</footer>
+
+  </template>
+</div>
+</body>
+</html>

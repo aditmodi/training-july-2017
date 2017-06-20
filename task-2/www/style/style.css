@@ -1,0 +1,376 @@
+
+@media all and (min-device-width:991px) {
+  body{
+    background-color: #F6F0EF;
+  }
+  #cover_photo{
+    position: static;
+    width: 100%;
+    height:300px;
+    margin-left: 0;
+  }
+  #page{
+    background-color: #F6F0EF;
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: -10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+
+  #menu{
+    list-style-type: none;
+    padding: 5%;
+  }
+  #menu li{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5%;
+  }
+  #menu li a{
+    color: #706D6D;
+  }
+  #menu li a:hover{
+    color: green;
+  }
+  .init_photo{
+    width: 90%;
+    height: auto;
+    padding: 3%;
+  }
+  #cl_form{
+    display: block;
+    height: auto;
+    width: 270px;
+    background-color: white;
+    margin-left: 2.5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    padding: 0;
+  }
+
+  #cl_form h3{
+    display: block;
+    height:40px;
+    background-color: #C3C3C3;
+    margin-top: 0;
+    border-radius: 10px 10px 0 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  #cl_form form div,button{
+    width:50%;
+    margin-left: 20%;
+  }
+  #cl_form form button{
+    margin-bottom: 30px;
+  }
+  #cl_form form div input{
+    box-shadow:inset 5px 5px 5px 0 #C3C3C3;
+  }
+  .updates{
+    text-align: center;
+    padding: 5%;
+    border-bottom: 1px solid grey;
+    margin-bottom: 3%;
+  }
+  #why{
+    text-align: justify;
+    padding: 5%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-color: white;
+  }
+  #WebPro h2{
+    margin-left: 2%;
+  }
+  #WebPro img{
+    display: inline-block;
+    width: 30%;
+    height: 30%;
+    border: 2px solid gray;
+    margin: 1%;
+    margin-top: 10%;
+  }
+  footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+}
+
+@media all and (min-device-width : 768px) and (max-device-width:991px) {
+  body{
+    background-color: #F6F0EF;
+  }
+  #cover_photo{
+    position: static;
+    width: 100%;
+    height:300px;
+    margin-left: 0;
+  }
+  #page{
+    background-color: #F6F0EF;
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: -10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+
+  #menu{
+    list-style-type: none;
+    padding: 5%;
+  }
+  #menu li{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5%;
+  }
+  #menu li a{
+    color: #706D6D;
+  }
+  #menu li a:hover{
+    color: green;
+  }
+  .init_photo{
+    width: 70%;
+    height: auto;
+    padding: 3%;
+  }
+  #cl_form{
+    display: block;
+    height: auto;
+    width: 270px;
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    padding: 0;
+  }
+
+  #cl_form h3{
+    display: block;
+    height:40px;
+    background-color: #C3C3C3;
+    margin-top: 0;
+    border-radius: 10px 10px 0 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  #cl_form form div,button{
+    width:50%;
+    margin-left: 20%;
+  }
+  #cl_form form button{
+    margin-bottom: 30px;
+  }
+  #cl_form form div input{
+    box-shadow:inset 5px 5px 5px 0 #C3C3C3;
+  }
+  .updates{
+    text-align: center;
+    padding: 5%;
+    border-bottom: 1px solid grey;
+    margin-bottom: 3%;
+  }
+  #why{
+    text-align: justify;
+    padding: 10%;
+  }
+  #WebPro h2{
+    margin-left: 2%;
+  }
+  #WebPro img{
+    display: inline-block;
+    width: 30%;
+    height: 30%;
+    border: 2px solid gray;
+    margin: 1%;
+    margin-top: 10%;
+  }
+  footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+}
+@media all and (min-device-width : 321px) and (max-device-width:768px) {
+  #cl_form{
+    margin-left: 25%;
+  }
+  #cover_photo{
+    display: none;
+  }
+  body{
+    background-color: #F6F0EF;
+  }
+  #menu{
+    list-style-type: none;
+    padding: 5%;
+  }
+  #menu li{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5%;
+  }
+  #menu li a{
+    color: #706D6D;
+  }
+  #menu li a:hover{
+    color: green;
+  }
+  .init_photo{
+    width: 90%;
+    height: auto;
+    padding: 3%;
+  }
+  #cl_form{
+    display: block;
+    height: auto;
+    width: 270px;
+    background-color: white;
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    padding: 0;
+  }
+
+  #cl_form h3{
+    display: block;
+    height:40px;
+    background-color: #C3C3C3;
+    margin-top: 0;
+    border-radius: 10px 10px 0 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  #cl_form form div,button{
+    width:50%;
+    margin-left: 20%;
+  }
+  #cl_form form button{
+    margin-bottom: 30px;
+  }
+  #cl_form form div input{
+    box-shadow:inset 5px 5px 5px 0 #C3C3C3;
+  }
+  .updates{
+    text-align: center;
+    padding: 5%;
+    border-bottom: 1px solid grey;
+    margin-bottom: 3%;
+  }
+  #why{
+    text-align: justify;
+    padding: 5%;
+  }
+  #WebPro h2{
+    margin-left: 2%;
+  }
+  #WebPro img{
+    display: inline-block;
+    width: 30%;
+    height: 30%;
+    border: 2px solid gray;
+    margin: 1%;
+    margin-top: 10%;
+  }
+  footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+}
+
+@media all and (max-device-width: 320px){
+  #cover_photo{
+    display: none;
+  }
+  body{
+    background-color: #F6F0EF;
+  }
+  #menu{
+    list-style-type: none;
+    padding: 5%;
+  }
+  #menu li{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5%;
+  }
+  #menu li a{
+    color: #706D6D;
+  }
+  #menu li a:hover{
+    color: green;
+  }
+  .init_photo{
+    width: 90%;
+    height: auto;
+    padding: 3%;
+  }
+  #cl_form{
+    display: block;
+    height: auto;
+    width: 270px;
+    background-color: white;
+    margin-left: 0%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    padding: 0;
+  }
+
+  #cl_form h3{
+    display: block;
+    height:40px;
+    background-color: #C3C3C3;
+    margin-top: 0;
+    border-radius: 10px 10px 0 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  #cl_form form div,button{
+    width:50%;
+    margin-left: 20%;
+  }
+  #cl_form form button{
+    margin-bottom: 30px;
+  }
+  #cl_form form div input{
+    box-shadow:inset 5px 5px 5px 0 #C3C3C3;
+  }
+  .updates{
+    text-align: center;
+    padding: 5%;
+    border-bottom: 1px solid grey;
+    margin-bottom: 3%;
+  }
+  #why{
+    text-align: justify;
+    padding: 5%;
+
+  }
+  #WebPro h2{
+    margin-left: 2%;
+  }
+  #WebPro img{
+    display: inline-block;
+    width: 30%;
+    height: 30%;
+    border: 2px solid gray;
+    margin: 1%;
+    margin-top: 10%;
+  }
+  footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+}
