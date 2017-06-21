@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <title>Admin Dashboard</title>
+  <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- Additional files -->
+    <link rel="stylesheet" href="dashboard.css">
+
+  </head>
+  <body>
+    <nav class="navbar cu">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Dashboard</a>
+        </div>
+      </div>
+      <div id="menu">
+        <ul class="nav navbar-nav collapse in">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      <div class="search">
+        <input id="search" type="text" placeholder=" Search" name="search">
+        <button id="Bsearch" >Search</button>
+      </div>
+    </div>
+    <button id="Bmenu" type="button" data-toggle="collapse" data-target="#menu">
+      <img src="images/menu.png" width="20px" height="20px">
+    </button>
+    </nav>
+    <div class="container fluid">
+      <div class="row">
+        <div class="col-md-2" id="sidebar">
+          <ul id="sidebar1">
+            <li class="active">Overview</li>
+            <li>Reports</li>
+            <li>Analytics</li>
+            <li>Export</li>
+          </ul>
+          <ul id="sidebar2">
+            <li>Nav item</li>
+            <li>Nav item again</li>
+            <li>One more nav</li>
+            <li>Another nav item</li>
+          </ul>
+          <ul id="sidebar3">
+            <li>Nav item again</li>
+            <li>One more nav item</li>
+            <li>Another nav item</li>
+          </ul>
+        </div>
+        <div class="col-md-10" id="heading">
+          <h1><b>Dashboard</b></h1>
+          <hr>
+          <div class="row" id="init_circle">
+            <div class="col-md-3 col-sm-6 bCircle">
+              <img src="images/blue.png" class="circle ">
+              <h3>Label</h3>
+              <div>Something else</div>
+            </div>
+            <div class="col-md-3 col-sm-6 gCircle">
+              <img src="images/green.png" class="circle ">
+              <h3>Label</h3>
+              <div>Something else</div>
+            </div>
+            <div class="col-md-3 col-sm-6 bCircle">
+              <img src="images/blue.png" class="circle ">
+              <h3>Label</h3>
+              <div>Something else</div>
+            </div>
+            <div class="col-md-3 col-sm-6 gCircle">
+              <img src="images/green.png" class="circle ">
+              <h3>Label</h3>
+              <div>Something else</div>
+            </div>
+        </div>
+        <div class="row">
+          <h2><b>Section Title</b></h2>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Header</th>
+                <th>Header</th>
+                <th>Header</th>
+                <th>Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="active">
+                <td>1001</td>
+                <td>sdak</td>
+                <td>dsfnj</td>
+                <td>fsdk</td>
+                <td>qewr</td>
+              </tr>
+              <tr>
+                <td>1002</td>
+                <td>sfdf</td>
+                <td>tret</td>
+                <td>ytry</td>
+                <td>fdas</td>
+              </tr>
+              <tr class="active">
+                <td>1003</td>
+                <td>gfd</td>
+                <td>vcxz</td>
+                <td>dsfsd</td>
+                <td>sdf</td>
+              </tr>
+              <tr>
+                <td>1004</td>
+                <td>qwerew</td>
+                <td>gfb</td>
+                <td>vcbx</td>
+                <td>dfgs</td>
+              </tr>
+              <tr class="active">
+                <td>1005</td>
+                <td>gfd</td>
+                <td>rwe</td>
+                <td>dfgs</td>
+                <td>hgdh</td>
+              </tr>
+              <tr>
+                <td>1006</td>
+                <td>rwewer</td>
+                <td>rew</td>
+                <td>dfgdf</td>
+                <td>gfd</td>
+              </tr>
+              <tr class="active">
+                <td>1007</td>
+                <td>hgfh</td>
+                <td>hgf</td>
+                <td>hgf</td>
+                <td>hg</td>
+              </tr>
+              <tr>
+                <td>gfhfd</td>
+                <td>hgf</td>
+                <td>hfg</td>
+                <td>hfg</td>
+                <td>hfg</td>
+              </tr>
+              <tr class="active">
+                <td>1009</td>
+                <td>fsd</td>
+                <td>gdfg</td>
+                <td>gfd</td>
+                <td>fgds</td>
+              </tr>
+              <tr>
+                <td>1010</td>
+                <td>gfdg</td>
+                <td>ghf</td>
+                <td>qef</td>
+                <td>gdfs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,180 @@
+body{
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+.cu{
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #292b2c !important;
+  z-index: 1;
+}
+nav div a{
+  color: white;
+  font-size: 15px;
+  padding: 2%;
+}
+#Bmenu{
+  display: none;
+}
+.search{
+  float: right;
+  margin-top: 0.5%;
+  margin-right: 1%;
+}
+
+#search{
+  border-radius: 4px;
+  width: 200px;
+  height: 35px;
+  border: none;
+}
+#Bsearch{
+  background: transparent;
+  border-radius: 5px;
+  border-width: 2px;
+  border-right: 2px;
+  border-color: #17D826;
+  color: #17D826;
+  width: 80px;
+  height: 35px;
+  z-index: 0;
+}
+#Bsearch:hover{
+  background-color: green;
+  color: white;
+}
+#sidebar{
+  position: fixed;
+  height: 100%;
+  width:15%;
+  background-color: #EBEDEE;
+  padding-left: 0;
+  padding-right: 0;
+  left: 0;
+  top:110px;
+}
+#sidebar ul{
+  list-style-type: none;
+  left:0;
+  right: 0;
+  overflow-x: hidden;
+  margin-left: -20%;
+}
+#sidebar ul li{
+  color: #1082C0;
+  font-size: 18px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: left;
+
+}
+#sidebar ul .active{
+  background: #1082C0;
+  color: white;
+}
+#sidebar ul li:hover{
+  color: #2E17D8;
+}
+#heading{
+  margin-left: 10%;
+  top: 110px;
+}
+#init_circle{
+  padding: 3%;
+  text-align: center;
+}
+.circle{
+  display:block;
+  height:auto;
+  width:100%;
+}
+.table{
+  font-size: 15px;
+}
+h2{
+  position: relative;
+  left: 0;
+}
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+  #sidebar{
+    top: 110px;
+  }
+  #heading{
+    top:110px;
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (min-device-width:321px) and (max-device-width:768px) {
+  #sidebar{
+    top: 110px;
+  }
+  #heading{
+    top:110px;
+  }
+}
+@media only screen and (max-device-width:320px) {
+  body nav{
+    height:150px;
+  }
+  nav div div a{
+    font-size: 75px !important;
+    margin-top: 50px !important;
+    margin-left: 50px !important;
+  }
+  #sidebar{
+    display: none;
+  }
+  #Bmenu{
+    display: block;
+    float: right;
+    height: 130px;
+    width: 130px;
+    background: transparent;
+    margin-top:-90px;
+  }
+  #menu{
+    display: none;
+  }
+  #heading{
+    left:0;
+    top: 150px;
+  }
+  #heading h1{
+    font-size: 120px;
+    text-align: left;
+    left: 0;
+  }
+  .circle{
+    left: 0;
+    display:block;
+    height:auto;
+    width:120%;
+  }
+  #init_circle h3{
+    font-size: 80px;
+  }
+  #init_circle{
+    padding: 3%;
+    text-align: center;
+    font-size: 40px;
+  }
+  .bCircle{
+    margin-left: -20% !important;
+  }
+  .gCircle{
+    margin-right: -10% !important;
+  }
+  .bCircle,.gCircle{
+    padding: 8%;
+  }
+  h2{
+    font-size: 90px;
+  }
+  .table{
+    font-size: 50px;
+    left: 0;
+    margin-left: -20%;
+  }
+}
