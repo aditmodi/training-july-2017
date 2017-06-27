@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <title>Form</title>
+  <head>
+    <script src="2.js"></script>
+  </head>
+  <body>
+    <form>
+      <div>First name - : <input type="text" placeholder="first name" maxlength="15" onkeydown="minLen(this)" onkeypress="return lettersOnly(event)" required></div>
+      <div>Last name - : <input type="text" placeholder="last name" maxlength="15" onkeydown="minLen(this)" onkeypress="return lettersOnly(event)" required></div>
+      <div>Mobile number - :<input type="text" placeholder="number" maxlength="10" minlength="10" onkeypress="return isNumber(event)" required></div>
+      <div>Date of Birth(DD-MM-YYYY) - :<input type="text" id="1" onkeyup="validateKey(this,document.getElementById('2'))" maxlength="2" onkeypress="return isNumber(event)" required>
+                                        <input type="text" id="2" onkeyup="validateKey(this,document.getElementById('3'))" maxlength="2" onkeypress="return isNumber(event)" required>
+                                        <input type="text" id="3" maxlength="4" onkeypress="return isNumber(event)" onchange="calcAge(document.getElementById('1'),document.getElementById('2'),this)" required></div>
+      <div id="age">Age - : </div>
+      <div>Email - :<input type="email" id="email" placeholder="Email" required></div>
+      <div>Password - :<input type="password" maxlength="15" onkeydown="minLen(this)" onkeypress="checkPass(this)" required></div>
+      <button type="submit">Submit</button>
+    </form>
+      <div id="show"></div>
+  </body>
+</html>

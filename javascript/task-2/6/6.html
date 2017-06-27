@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+  <title>Phone and IP</title>
+  <head>
+    <script src="6.js"></script>
+  </head>
+  <body>
+    <div>Enter your phone number</div>
+    <input type="text" id="num" maxlength="10" onkeypress="return isNumber(event)">
+    <div id="error1"></div>
+    <div>Enter your IP address</div>
+    <input type="text" id="ip" maxlength="12" onkeypress="return isNumber(event)">
+    <button onclick="number()">Check</button>
+    <div id="erroe2"></div>
+    <div id="disNum"></div>
+    <div id="disIP"></div>
+  </body>
+</html>

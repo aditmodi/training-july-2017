@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <title>Table</title>
+  <head>
+    <script type=text/javascript src="1.js"></script>
+  </head>
+  <body>
+    <table id="table">
+      <tr>
+        <th>Checkboxes</th>
+        <th>Array item</th>
+        <th></th>
+      </tr>
+      <tr id = "0_row">
+        <td><input id="0_check" type="checkbox" class="checkBoxes" onclick="addElement(this)"></td>
+        <td><input id="0_text" type="text" class="value"></td>
+        <td></td>
+      </tr>
+    </table>
+    <button onclick="addRow()">Add More</button>
+    <button onclick="dispArray()">Show Array</button>
+    <button onclick="numRows()">Length</button>
+    <button onclick="deleteRows()">Delete</button>
+
+    <div id="show"></div>
+    <div id="show1"></div>
+    <div id="show2"></div>
+  </body>
+</html>
