@@ -27,10 +27,10 @@ class Validity{
   }
   minLen(v){
     if(v.value.length < 6){
-      document.getElementById('show').innerHTML = "too short";
+      document.getElementById(v.id + "_error").innerHTML = "too short";
     }
     else{
-      document.getElementById('show').innerHTML = "";
+      document.getElementById(v.id + "_error").innerHTML = "";
     }
   }
 
@@ -44,36 +44,24 @@ class Validity{
   checkPass(v){
     var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
     if(!v.match(paswd)){
-      document.getElementById('show').innerHTML = "Password should include atleast one letter and one special character";
+      document.getElementById('pass_error').innerHTML = "Password should include atleast one letter and one special character";
+    }
+    else{
+      document.getElementById('pass_error').innerHTML = "";
+
     }
   }
-
 }
 
-function lettersOnly(){
-  let obj = new Validity();
-  obj.lettersOnly();
-}
-function isNumber(evt) {
-  let obj = new Validity();
-  obj.isNumber(evt);
-}
 
-function validateKey(field,nextField){
-  let obj = new Validity();
-  obj.validateKey(field, nextField);
-}
-function minLen(v){
-  let obj = new Validity();
-  obj.minLen(v);
-}
+Validity = new Validity();
 
-function calcAge(day, month, year){
-  let obj = new Validity();
-  obj.calcAge(day.value, month.value, year.value);
-}
-
-function checkPass(v){
-  let obj = new Validity();
-  obj.checkPass(v.value);
+function submitForm(){
+  if ((document.getElementById('fname_error').value = "") && (document.getElementById('lname_error').value = "") && (document.getElementById('pass_error').value = "") ){
+    return true;
+  }
+  else{
+    alert('correct the errors');
+    return false;
+  }
 }
