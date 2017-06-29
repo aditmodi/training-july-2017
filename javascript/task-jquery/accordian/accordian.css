@@ -1,0 +1,18 @@
+.accordian {
+  /*display: block;*/
+  justify-content: center;
+}
+
+.topic {
+  text-align: center;
+  padding: 10px;
+  border : 1px solid black;
+  background-color: #212F3C;
+  color: white;
+}
+.content {
+  display: none;
+  padding:20px;
+  background: white;
+  color: black;
+}
