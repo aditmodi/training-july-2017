@@ -1,0 +1,38 @@
+<body>
+  <div class="container subtaskShow">
+  <header>
+    <h1>Subtasks ({{incompleteCountSub}})</h1>
+    <label class="hide-completed">
+      <input type="checkbox"/>
+      Hide completed subtasks
+    </label>
+    {{#if currentUser}}
+      <form class="new-subtask">
+        <input type="text" name="text" placeholder="type the subtask here"/>
+      </form>
+    {{/if}}
+  </header>
+<ul>
+  {{#each subtasks}}
+    {{> subtask}}
+  {{/each}}
+</ul>
+</div>
+
+</body>
+<template name = "subtask">
+  <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+    <button class="deleteSub">&times;</button>
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked"/>
+    {{#if isOwner}}
+      <button class="toggle-private">
+        {{#if private}}
+          Private
+        {{else}}
+          Public
+        {{/if}}
+      </button>
+    {{/if}}
+    <span class="text">{{text}}</span>
+  </li>
+</template>

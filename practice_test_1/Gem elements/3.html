@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+  <title>Rock Gem Elements</title>
+  <head>
+    <script src="3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div>Enter number of test cases - : </div>
+    <input type="text" id='num' onchange=" return isNum(this.value)">
+    <button type="button" class="create" onclick="createFields(document.getElementById('num').value)">Create</button>
+    <div id='field'></div>
+    <div id='output'></div>
+  </body>
+</html>

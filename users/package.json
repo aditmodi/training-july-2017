@@ -1,0 +1,13 @@
+{
+  "name": "node-api",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.0.2",
+    "express": "~4.0.0",
+    "express-acl": "^1.0.3",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.7.7",
+    "morgan": "^1.8.2",
+    "permission": "^1.0.4"
+  }
+}

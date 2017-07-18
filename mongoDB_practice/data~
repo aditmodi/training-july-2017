@@ -1,0 +1,15 @@
+1 - :{"_id" : "SS/SD/15/35", "first_name" : "Sapna", "last_name" : "Upreti", "user_name" : "sapna@successivesoftwares.com", "password" : "54321", "bday" : { "day" : "03", "month" : "12", "year" :"1950" }, "number" : { "work" : "9876543210", "home" : "01127817263" }, "addr" : "Sucessive software office noida", "gender" : "female", "mar_stat" : "unmarried", "bg" : "B+", "edu" : {"10th" : { "perc" : "100", "name" : "DelhiPublicSchool" }, "12th" : { "perc" : "100", "name" : "DelhiPublicSchool" }, "college" : { "perc" : "80", "name" : "IIT Delhi" } }, "job_title" : "software engineer", "Dept" : "Software Engineering", "manager_id" : "SS/SD/12/02", "docs" : { "DL" : { "lisc_no" : "12345678", "name" : "sapna upreti", "father" : "mr. upreti", "dob" : "03-12-1950" }, "PanCard" : { "pan_no" : "12345678", "name" : "sapna upreti", "father" : "mr. upreti", "dob" : "03-12-1950" }, "Passport" : { "pass_no" : "12345678", "name" : "sapna upreti", "father" : "mr. upreti", "dob" : "03-12-1950" } } }
+
+
+2 - : {"_id" : "SS/SD/17/28", "first_name" : "adit", "last_name" : "modi", "user_name" : "adit.m@successivesoftwares.com", "password" : "12345", "bday" : { "day" : "15", "month" : "03", "year" :"1995" }, "number" : { "work" : "9560669099", "home" : "01127567436" }, "addr" : "A-119 Shakti apartments sector-9 rohini delhi-110085", "gender" : "male", "mar_stat" : "unmarried", "bg" : "null", "edu" : {"10th" : { "perc" : "87.5", "name" : "N.K.BagrodiaPublicSchool" }, "12th" : { "perc" : "91.4", "name" : "N.K.BagrodiaPublicSchool" }, "college" : { "perc" : "60", "name" : "Delhi Technological University" } }, "job_title" : "software engineer", "Dept" : "Software Engineering", "manager_id" : "SS/SD/15/35", "docs" : { "DL" : { "lisc_no" : "12345678", "name" : "adit modi", "father" : "naveen modi", "dob" : "15-03-1995" }, "PanCard" : { "pan_no" : "12345678", "name" : "adit modi", "father" : "naveen modi", "dob" : "15-03-1995" }, "Passport" : { "pass_no" : "12345678", "name" : "adit modi", "father" : "naveen modi", "dob" : "15-03-1995" } } }
+
+
+3 - : {"_id" : "SS/SD/12/02", "first_name" : "nikhil", "last_name" : "sharma", "user_name" : "nikhil@successivesoftwares.com", "password" : "00000", "bday" : { "day" : "01", "month" : "01", "year" :"1900" }, "number" : { "work" : "9999999999", "home" : "01122222222" }, "addr" : "NodeXperts Noida", "gender" : "male", "mar_stat" : "unmarried", "bg" : "null", "edu" : {"10th" : { "perc" : "99", "name" : "SomePublicSchool" }, "12th" : { "perc" : "99", "name" : "SomePublicSchool" }, "college" : { "perc" : "99", "name" : "Some University" } }, "job_title" : "software engineer", "Dept" : "Software Engineering", "docs" : { "DL" : { "lisc_no" : "12345678", "name" : "nikhil sharma", "father" : "mr. sharma", "dob" : "01-01-1900" }, "PanCard" : { "pan_no" : "12345678", "name" : "nikhil sharma", "father" : "mr.sharma", "dob" : "01-01-1900" }, "Passport" : { "pass_no" : "12345678", "name" : "nikhil sharma", "father" : "mr.sharma", "dob" : "01-01-1900" } } }
+
+
+
+
+				HOLIDAYS
+
+{"rep_day" : [26, 1], "holi" : [13, 3], "independence" : [15, 8], "gandhi_jayanti" : [2, 10], "diwali" : [19, 10], "christmas" : [25, 12]}
+

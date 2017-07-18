@@ -1,0 +1,13 @@
+<body>
+  <ul class="demotask">
+    {{#each demoTasks}}
+      {{> demolist}}
+    {{/each}}
+  </ul>
+  <button class="GoBack">Go Back</button>
+</body>
+<template name = "demolist">
+  <li>
+    <span class="text ">{{text}}</span>
+  </li>
+</template>
