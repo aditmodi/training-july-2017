@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Tasks } from '../api/tasks.js';
-import { SubTasks } from '../api/subtasks.js';
+
 import './task.js';
 import './body.html';
 import './demoLists.html';
@@ -30,17 +30,7 @@ Template.body.helpers({
   demoTasks(){
     return Tasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
   },
-  subtasks() {
-        const instance = Template.instance();
-        if (instance.state.get('hideCompleted')) {
-          // If hide completed is checked, filter tasks
-          return SubTasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
-        }
-    		return SubTasks.find({});
-      },
-  incompleteCountSub() {
-    return SubTasks.find({ checked: { $ne: true } }).count();
-  },
+
 });
 Template.body.events({
   'submit .new-task'(event) {

@@ -1,6 +1,23 @@
 import './subtask.html';
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
+import { SubTasks } from '../api/subtasks.js';
+import task_Id from './task.js';
+
+Template.body.helpers({
+  subtasks() {
+        const instancesub = Template.instance();
+        console.log("from 2nd : ", task_Id);
+        if (instancesub.state.get('hideCompleted')) {
+          // If hide completed is checked, filter tasks
+          return SubTasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
+        }
+    		return SubTasks.find({});
+      },
+  incompleteCountSub() {
+    return SubTasks.find({ checked: { $ne: true } }).count();
+  },
+});
 
 
   Template.registerHelper('subtask', function isOwner(){

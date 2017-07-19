@@ -7,13 +7,12 @@ export const SubTasks = new Mongo.Collection('subtasks');
 if (Meteor.isServer) {
   // This code only runs on the server
   Meteor.publish('subtasks', function subtasksPublication() {
-    console.log('from publish', Tid);
+    console.log("from publish : ",Tid);
     return SubTasks.find({
       $or: [
         { private: { $ne: true } },
         { owner: this.userId },
-    
-      ]
+      ],
     });
   });
 }
@@ -24,15 +23,15 @@ Meteor.methods({
     check(text,String);
     if(!Meteor.userId)
       throw new Meteor.error('Not authorized');
-      console.log('abc');
-      Tid = iden;
+    Tid = iden;
+    console.log("tid :",Tid);
     SubTasks.insert({
       text,
       createdAt : new Date(),
       owner : Meteor.userId(),
       TaskId : iden
     });
-console.log(Tid);
+
   },
   'subtasks.remove'(taskId) {
     check(taskId, String);

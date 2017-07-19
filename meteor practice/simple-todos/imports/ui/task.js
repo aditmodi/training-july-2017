@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import './task.html';
+import { ReactiveVar } from 'meteor/reactive-var';
 export var task_Id;
 Template.task.helpers({
   isOwner() {
@@ -20,7 +21,7 @@ Template.task.events({
     Meteor.call('tasks.setPrivate', this._id, !this.private);
   },
   'click .subB'() {
-    task_Id = this._id;
+    ReactiveVar.task_Id = this._id;
     console.log('from task.js',this._id);
     $('.mainBody').hide();
     $('.subtaskShow').show();
