@@ -24,7 +24,7 @@ Meteor.methods({
     if(!Meteor.userId)
       throw new Meteor.error('Not authorized');
     Tid = iden;
-    console.log("tid :",Tid);
+    console.log("Tid :",Tid);
     SubTasks.insert({
       text,
       createdAt : new Date(),

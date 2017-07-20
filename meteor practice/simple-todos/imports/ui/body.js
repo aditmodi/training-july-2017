@@ -1,17 +1,20 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
+import { ReactiveVar } from 'meteor/reactive-var';
 import { Tasks } from '../api/tasks.js';
+import { SubTasks } from '../api/subtasks.js';
 
 import './task.js';
 import './body.html';
 import './demoLists.html';
 import './subtask.js';
-import task_Id from './task.js';
+import tid from './task.js';
 
 Template.body.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
   Meteor.subscribe('tasks');
+  // this.tid = new ReactiveVar();
   Meteor.subscribe('subtasks');
 });
 
@@ -30,7 +33,18 @@ Template.body.helpers({
   demoTasks(){
     return Tasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
   },
-
+  subtasks() {
+        const instancesub = Template.instance();
+        console.log("from 2nd : ", tid.tid.get());
+        if (instancesub.state.get('hideCompleted')) {
+          // If hide completed is checked, filter tasks
+          return SubTasks.find({ TaskId : tid.tid.get(), checked: { $ne: true } }, { sort: { createdAt: -1 } });
+        }
+    		return SubTasks.find({ TaskId : tid.tid.get() });
+      },
+  incompleteCountSub() {
+    return SubTasks.find({$and : [{ checked: { $ne: true }}, {TaskId : tid.tid.get()}] }).count();
+  },
 });
 Template.body.events({
   'submit .new-task'(event) {
@@ -53,9 +67,8 @@ Template.body.events({
     // Get value from form element
     const target = event.target;
     const text = target.text.value;
-    console.log('from body', task_Id.task_Id);
-    Meteor.call('subtasks.insert', text, task_Id.task_Id);
-
+    console.log('from body', tid.tid.curValue);
+    Meteor.call('subtasks.insert', text, tid.tid.curValue);
     // Clear form
     target.text.value = '';
   },
