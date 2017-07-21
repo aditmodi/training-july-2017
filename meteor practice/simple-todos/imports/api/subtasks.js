@@ -21,14 +21,14 @@ Meteor.methods({
   'subtasks.insert'(text, iden){
     console.log('from subtasks.js', iden);
     check(text,String);
-    if(!Meteor.userId)
-      throw new Meteor.error('Not authorized');
+    // if(!Meteor.userId)
+    //   throw new Meteor.error('Not authorized');
     Tid = iden;
     console.log("Tid :",Tid);
     SubTasks.insert({
       text,
       createdAt : new Date(),
-      owner : Meteor.userId(),
+      owner : this.userId,
       TaskId : iden
     });
 

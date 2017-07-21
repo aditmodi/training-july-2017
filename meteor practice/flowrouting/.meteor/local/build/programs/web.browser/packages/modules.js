@@ -148,23 +148,24 @@ install("shell-server");                                                        
 install("autopublish");                                                                                                // 70
 install("reactive-dict");                                                                                              // 71
 install("kadira:flow-router");                                                                                         // 72
-install("webapp", "meteor/webapp/webapp_client.js");                                                                   // 73
-install("livedata");                                                                                                   // 74
-install("dynamic-import", "meteor/dynamic-import/client.js");                                                          // 75
-install("hot-code-push");                                                                                              // 76
-install("jquery", "meteor/jquery/main.js");                                                                            // 77
-install("observe-sequence");                                                                                           // 78
-install("deps");                                                                                                       // 79
-install("htmljs");                                                                                                     // 80
-install("blaze");                                                                                                      // 81
-install("spacebars");                                                                                                  // 82
-install("templating-compiler");                                                                                        // 83
-install("templating-runtime");                                                                                         // 84
-install("templating");                                                                                                 // 85
-install("launch-screen");                                                                                              // 86
-install("ui");                                                                                                         // 87
-install("autoupdate");                                                                                                 // 88
-                                                                                                                       // 89
+install("jquery", "meteor/jquery/main.js");                                                                            // 73
+install("observe-sequence");                                                                                           // 74
+install("deps");                                                                                                       // 75
+install("htmljs");                                                                                                     // 76
+install("blaze");                                                                                                      // 77
+install("spacebars");                                                                                                  // 78
+install("templating-compiler");                                                                                        // 79
+install("templating-runtime");                                                                                         // 80
+install("templating");                                                                                                 // 81
+install("kadira:blaze-layout");                                                                                        // 82
+install("webapp", "meteor/webapp/webapp_client.js");                                                                   // 83
+install("livedata");                                                                                                   // 84
+install("dynamic-import", "meteor/dynamic-import/client.js");                                                          // 85
+install("hot-code-push");                                                                                              // 86
+install("launch-screen");                                                                                              // 87
+install("ui");                                                                                                         // 88
+install("autoupdate");                                                                                                 // 89
+                                                                                                                       // 90
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"process.js":function(require,exports,module){

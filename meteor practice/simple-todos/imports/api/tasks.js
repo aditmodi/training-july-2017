@@ -17,24 +17,30 @@ if (Meteor.isServer) {
 
 Meteor.methods({
   'tasks.insert'(text) {
+    // return text;
     check(text, String);
+    // console.log('called', text);
     // Make sure the user is logged in before inserting a task
-    if (!this.userId) {
-      throw new Meteor.Error('not-authorized');
-    }
-    const user = Meteor.users.findOne({ _id: this.userId });
-    console.log('user : ', user);
+    // if (! Meteor.userId()) {
+    //   throw new Meteor.Error('not-authorized');
+    // }
+    // console.log(Tasks.find().fetch());
     Tasks.insert({
       text,
       createdAt: new Date(),
-      owner: this.userId,
-      username: user
+      owner: Meteor.userId(),
+      username: Meteor.user().username,
     });
   },
-  'tasks.remove'(taskId) {
+  'tasks.remove'(taskId, iden) {
     check(taskId, String);
-
-    Tasks.remove(taskId);
+    // console.log('userId:', Meteor.userId());
+    if(iden != Meteor.user().username){
+      window.alert("not authorized");
+    }
+    else{
+      Tasks.remove(taskId);
+    }
   },
   'tasks.setChecked'(taskId, setChecked) {
     check(taskId, String);
@@ -49,9 +55,9 @@ Meteor.methods({
    const task = Tasks.findOne(taskId);
 
    // Make sure only the task owner can make a task private
-   if (task.owner !== this.userId) {
-     throw new Meteor.Error('not-authorized');
-   }
+  //  if (task.owner !== Meteor.userId()) {
+  //    throw new Meteor.Error('not-authorized');
+  //  }
 
    Tasks.update(taskId, { $set: { private: setToPrivate } });
  },

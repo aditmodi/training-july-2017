@@ -208,6 +208,18 @@
       "path": "packages/kadira_flow-router.js"
     },
     {
+      "path": "packages/templating-compiler.js"
+    },
+    {
+      "path": "packages/templating-runtime.js"
+    },
+    {
+      "path": "packages/templating.js"
+    },
+    {
+      "path": "packages/kadira_blaze-layout.js"
+    },
+    {
       "path": "packages/livedata.js"
     },
     {
@@ -219,15 +231,6 @@
     },
     {
       "path": "packages/launch-screen.js"
-    },
-    {
-      "path": "packages/templating-compiler.js"
-    },
-    {
-      "path": "packages/templating-runtime.js"
-    },
-    {
-      "path": "packages/templating.js"
     },
     {
       "path": "packages/autoupdate.js"

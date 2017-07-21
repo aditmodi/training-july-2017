@@ -17,7 +17,9 @@ Template.task.events({
     Meteor.call('tasks.setChecked', this._id, !this.checked);
   },
   'click .delete'() {
-    Meteor.call('tasks.remove', this._id);
+    tid.set(this.username);
+    Meteor.call('tasks.remove', this._id, tid.curValue);
+    console.log('username :: ', tid.curValue);
   },
   'click .toggle-private'() {
     Meteor.call('tasks.setPrivate', this._id, !this.private);
@@ -25,7 +27,7 @@ Template.task.events({
   'click .subB'() {
 
     tid.set(this._id);
-    console.log('from task.js',tid.curValue);
+    console.log('from task.js',tid);
     $('.mainBody').hide();
     $('.subtaskShow').show();
   }

@@ -120,13 +120,14 @@ install("standard-minifier-js");
 install("shell-server", "meteor/shell-server/main.js");
 install("reactive-dict");
 install("kadira:flow-router");
+install("templating-compiler");
+install("templating-runtime");
+install("templating");
+install("kadira:blaze-layout");
 install("livedata");
 install("dynamic-import", "meteor/dynamic-import/server.js");
 install("hot-code-push");
 install("launch-screen");
-install("templating-compiler");
-install("templating-runtime");
-install("templating");
 install("autoupdate");
 install("reload");
 
