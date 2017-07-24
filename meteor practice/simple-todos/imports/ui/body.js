@@ -43,8 +43,8 @@ Template.body.helpers({
     		return SubTasks.find({ TaskId : tid.tid.get() });
       },
   incompleteCountSub() {
-    return SubTasks.find({$and : [{ checked: { $ne: true }}, {TaskId : tid.tid.get()}] }).count();
-  },
+    return SubTasks.find({$and : [{ checked: { $ne: true }}] }).count();
+  }
 });
 Template.body.events({
   'submit .new-task'(event) {
@@ -63,6 +63,7 @@ Template.body.events({
   'submit .new-subtask'(event) {
     // Prevent default browser form submit
     event.preventDefault();
+    
 
     // Get value from form element
     const target = event.target;

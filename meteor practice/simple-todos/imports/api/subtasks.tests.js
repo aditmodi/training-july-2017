@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Random } from 'meteor/random';
 import { assert } from 'meteor/practicalmeteor:chai';
 import { SubTasks } from './subtasks.js';
+// import settings from '../../settings.json';
 
 if(Meteor.isServer){
   describe('Subtasks', () => {
@@ -28,7 +29,7 @@ if(Meteor.isServer){
       it('can insert task', () => {
         const insertTask = Meteor.server.method_handlers['subtasks.insert'];
         stub = sinon.stub(Meteor, "userId", () => {
-          return "sajniwhb221baasd";
+          return this.userId;
         });
         // const stub2 = sinon.stub(Meteor, "user", () =>{
         //   return this.user.username;
@@ -36,12 +37,23 @@ if(Meteor.isServer){
         // const err = sinon.stub(Meteor, "Error");
         console.log('stub : ', stub);
         // console.log('stub2 : ', stub2);
-        const invocation2 = { userId };
-        console.log('invocation2 : ',invocation2.userId);
+        const invocation2 = stub;
+        console.log('invocation2ofsubtask : ',invocation2.userId);
         insertTask.apply(invocation2.userId, [text]);
 
         assert.equal(SubTasks.find().count(),2);
 
+      });
+
+      it('cannot insert more than limit', () => {
+        const invocation2 = stub;
+        const insertTask = Meteor.server.method_handlers['subtasks.insert'];
+        for (var i = 0; i <= Meteor.settings.public.limit; i++) {
+          console.log("Meteor : ", Meteor.settings.public.limit);
+          console.log('invocation2ofsubtask : ',invocation2.userId);
+          insertTask.apply(invocation2.userId, [text]);
+        }
+        assert.equal(SubTasks.find().count(),1);
       });
 
 

@@ -8,7 +8,6 @@ if(Meteor.isServer){
     describe('methods', () => {
       const userId = Random.id();
       let taskId, text;
-      let stub1;
 
       beforeEach(() => {
         Tasks.remove({});
@@ -19,14 +18,14 @@ if(Meteor.isServer){
           username : 'tmeasday',
         });
       });
-      afterEach(() => {
-        stub1.restore();
-      });
+      // afterEach(() => {
+      //   stub1.restore();
+      // });
       it('can delete task', () => {
         // Find the internal implementation of the task method so we can
         // test it in isolation
         const deleteTask = Meteor.server.method_handlers['tasks.remove'];
-        stub1 = sinon.stub(Meteor, "user", function() {
+        let stub1 = sinon.stub(Meteor, "user", function() {
           return "shakaal";
         });
         console.log('stub1 : ', stub1);
@@ -38,6 +37,7 @@ if(Meteor.isServer){
 
         // Verify that the method does what we expected
         assert.equal(Tasks.find().count(), 0);
+        stub1.restore();
 
       });
 
@@ -47,10 +47,10 @@ if(Meteor.isServer){
       it('can insert task', () => {
         text = "Yo wassup dog...";
         const insertTask = Meteor.server.method_handlers['tasks.insert'];
-        const stub3 = sinon.stub(Meteor, "userId", function() {
+        let stub3 = sinon.stub(Meteor, "userId", function() {
           return "xasbkjbuWDSN12nxnjl";
         });
-        const stub2 = sinon.stub(Meteor, "user", () =>{
+        let stub2 = sinon.stub(Meteor, "user", () =>{
           return "shakaal";
         });
         // const err = sinon.stub(Meteor, "Error");
@@ -61,10 +61,13 @@ if(Meteor.isServer){
         insertTask.apply(invocation2.userId, [text]);
 
         assert.equal(Tasks.find().count(),2);
-        afterEach(() => {
-          stub1.restore();
-        });
+        stub2.restore();
+        stub3.restore();
       });
+      // afterEach(() => {
+      //   stub3.restore();
+      //   stub2.restore();
+      // });
         beforeEach(() => {
           Tasks.remove({});
           taskId = Tasks.insert({
