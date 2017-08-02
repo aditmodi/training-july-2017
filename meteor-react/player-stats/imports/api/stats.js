@@ -12,14 +12,33 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-  'list.insert'(name, phone, gender, age, height, weight){
+  'list.insert'(name, phone, gender, age, height, weight, speciality){
+    console.log("insert called");
     PlayerStats.insert({
       name : name,
       phone : phone,
       gender : gender,
       age : age,
       height : height,
-      weight : weight
+      weight : weight,
+      speciality : speciality
     });
+  },
+  'list.update'(name, phone, gender, age, height, weight, speciality){
+    PlayerStats.update(
+      { name : name},
+      {
+        name : name,
+        phone : phone,
+        gender : gender,
+        age : age,
+        height : height,
+        weight : weight,
+        speciality : speciality
+      }
+    )
+  },
+  'list.fetch'(id){
+    return PlayerStats.findOne({_id : id});
   }
 });

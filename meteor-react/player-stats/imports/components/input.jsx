@@ -1,19 +1,35 @@
 import React, {Component} from 'react';
 
+
 export default class Input extends Component{
   constructor(props){
     super(props);
-    this.state = {value : '', valid: false, message:''};
+    this.state = {
+      value : props.value,
+      valid: false,
+      message:''
+    };
   }
+
+  // componentWillReceiveProps(nextProps){
+  //   console.log("yoyooyyooy");
+  //   this.setState({valid : true});
+  // }
 
     handleChange = (event) => {
       // this.setState({ value : event.target.value, valid : true, message : '' });
       return true;
     }
 
+    resetValue = () => {
+      this.setState({
+        value : '', valid: false, message:''
+      })
+    }
+
     isNumber = (event) => {
       var reg = /^[0-9]+$/;
-      if (!reg.test(event.target.value)) {
+      if (!reg.test(event)) {
         return false;
       } else {
         return true;
@@ -22,36 +38,33 @@ export default class Input extends Component{
     isAlpha = (event) => {
       console.log("called");
       var reg = /^[A-z]+$/;
-      if (!reg.test(event.target.value)) {
+      if (!reg.test(event)) {
         return false;
       } else {
         return true;
       }
     }
-    // isEmail = (event) => {
-    //   console.log(event.target.value);
-    //   var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //   if (!reg.test(event.target.value)) {
-    //     return false;
-    //   } else {
-    //     return true;
-    //   }
-    // }
 
-    onChange = (event) => {
+    onChange = () => {
+      let value = this.input.value;
+      let valid;
+      if (this.props.type == "name"){
+        valid = this.isAlpha(value)
+      }
+      else if (this.props.type == "num"){
+        valid = this.isNumber(value)
+      }
+      else{
+        valid = this.handleChange(value)
+      }
+      let message = valid == true ? '' : value.length == 0 ? '*required' : 'invalid';
       console.log("from method : ", this.props.type);
       switch(this.props.type){
-        case "name"  : this.setState({ value : event.target.value, valid : this.isAlpha(event), message : this.state.valid==true?'':'Invalid' });
+        case "name"  : this.setState({ value : value, valid : valid, message : message });
                       break;
-        case "age"  : this.setState({ value : event.target.value, valid : this.isNumber(event), message : this.state.valid==true?'':'Invalid' });
+        case "num"  : this.setState({ value : value, valid : valid, message : message });
                       break;
-        case "phone" : this.setState({ value : event.target.value, valid : this.isNumber(event), message : this.state.valid==true?'':'Invalid' });
-                      break;
-        case "height" : this.setState({ value : event.target.value, valid : this.isNumber(event), message : this.state.valid==true?'':'Invalid' });
-                      break;
-        case "weight" : this.setState({ value : event.target.value, valid : this.isNumber(event), message : this.state.valid==true?'':'Invalid' });
-                      break;
-        default      : this.setState({ value : event.target.value, valid : this.handleChange(event), message : this.state.valid==true?'':'Invalid' });
+        default      : this.setState({ value : value, valid : valid, message :message });
                       break;
 
       }
@@ -59,8 +72,8 @@ export default class Input extends Component{
   render(){
     return (
       <div>
-        <input type="text" value={this.state.value} onChange={this.onChange} required/>
-        {this.state.message}
+        <input className="form-control" ref = {input => this.input=input} type="text" value={this.state.value} onChange={this.onChange} onBlur = {this.onChange}/>
+        <span className="errors" style={{color:'red'}}>{this.state.message}</span>
       </div>
     );
   }

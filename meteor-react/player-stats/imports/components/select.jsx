@@ -1,17 +1,27 @@
 import React, {Component} from 'react';
 
+const options = ['Batsman', 'Bowler', 'Fielder', 'WK', 'All Rounder'];
+
 export default class SelectBox extends Component{
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    this.state = {selectedOption : 'Batsman'};
   }
+
+  handleChange = (event) => {
+    this.setState({ selectedOption : event.target.value });
+  }
+
   render(){
     return(
-      <select type="Speciality" required>
-        <option value="batsman" ref = {this.props.inputRef}>Batsman</option>
-        <option value="bowler" ref = {this.props.inputRef}>Bowler</option>
-        <option value="fielder" ref = {this.props.inputRef}>Fielder</option>
-        <option value="keeper" ref = {this.props.inputRef}> Wicket Keeper</option>
-        <option value="rounder" ref = {this.props.inputRef}>All Rounder</option>
+      <select type="Speciality" value={this.state.selectedOption} onChange={this.handleChange}>
+        {
+          options.map((item, key) => {
+            return (
+              <option key={key} value={item} >{item}</option>
+            )
+          })
+        }
       </select>
     )
   }

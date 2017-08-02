@@ -3,16 +3,14 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { PlayerStats } from '../api/stats.js';
 import Task from './listitem.jsx';
 import ReactDOM from 'react-dom';
+import { getDetails } from './form.jsx';
+import { Link } from 'react-router-dom';
 
 class List extends Component {
-    getTasks() {
-      return this.props.tasks.map((task) => (
-       <Task task={task} />
-     ));
-   }
 
-   renderTasks() {
-     return this.getTasks().map((task, i) => (
+   renderTasks = () => {
+     console.log('details : ',getDetails);
+     return this.props.tasks.map((task, i) => (
        <Task key={i} task={task} />
      ));
    }
@@ -20,13 +18,25 @@ class List extends Component {
    render() {
      return (
        <div className="container">
+         <Link to="/" title="Go back">Go Home</Link><br/>
          <header>
            <h1>Players List</h1>
          </header>
 
-         <ul>
-           {this.renderTasks()}
-         </ul>
+        <table className="table table-bordered">
+          <tbody>
+            <tr className="success">
+
+              {
+                getDetails.map((item, key) => {
+                  return (<th key={key}>{item.charAt(0).toUpperCase() + item.slice(1)}</th>)
+                })
+              }
+              <th key='edit'>Edit</th>
+            </tr>
+            {this.renderTasks()}
+          </tbody>
+        </table>
        </div>
      );
    }
